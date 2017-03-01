@@ -30,4 +30,4 @@ With C# 6 we have some exemples of
 
 ## The presentation
 
-Slides of the presentation are available on the [SlideShare]()
+Slides of the presentation are available on the [SlideShare](https://www.slideshare.net/celsojunior351/microservices-with-nancy-and-vs-code)
