@@ -5,7 +5,7 @@ This project is designed to give you inspiration so you can build your own Micro
 
 ## About this project
 In a Microservice perspective
-* It's a simple HTTP API which run anywhere;
+* It's a simple HTTP API which runs anywhere;
 * It's a Stateless Microservice but you can turn it into Stateful if you want;
 * It has a simple InMemory Event Store implemented;
 * It uses the Log4net for logging;
