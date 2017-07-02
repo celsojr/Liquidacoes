@@ -59,7 +59,7 @@ namespace Liquidacoes.Handlers.Receipts
             }
 
             var paymentService = new PaymentService(appSettings);
-            bool hasPayment = await paymentService.GetPaymentAsync(receipt.Nf, boleto).ConfigureAwait(false);
+            bool hasPayment = await paymentService.GetPaymentAsync(receipt.Nf, boleto);
             
             if (!hasPayment)
             {

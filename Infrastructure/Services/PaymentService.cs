@@ -29,7 +29,7 @@ namespace Liquidacoes.Infrastructure.Services
                 var baseAddress = appSettings?.PaymentApi?.BaseAddress;
                 var uri = $"{baseAddress}/payment/{nf}/{boleto}";
 
-                var response = await client.GetAsync(new Uri(uri)).ConfigureAwait(false);
+                var response = await client.GetAsync(new Uri(uri));
 
                 return response.IsSuccessStatusCode;
             }

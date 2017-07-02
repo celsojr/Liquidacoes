@@ -54,7 +54,7 @@ namespace Liquidacoes.Handlers.FileUpload
                             continue;
                         }
 
-                        await ProccessReceiptAsync(receipt).ConfigureAwait(false);
+                        await ProccessReceiptAsync(receipt);
                     }
                 }
             }

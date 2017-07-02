@@ -35,8 +35,8 @@ namespace Liquidacoes.Modules.Common
             var stream = new MemoryStream();
             var writer = new StreamWriter(stream);
 
-            await writer.WriteAsync(value).ConfigureAwait(false);
-            await writer.FlushAsync().ConfigureAwait(false);
+            await writer.WriteAsync(value);
+            await writer.FlushAsync();
 
             stream.Position = 0;
             return stream;

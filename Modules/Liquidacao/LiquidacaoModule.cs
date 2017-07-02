@@ -33,8 +33,7 @@ namespace Liquidacoes.Modules.Liquidacao
                 var mimeType = MimeTypes.GetMimeType(fileName);
 
                 return Response
-                    .FromStream(await this.GetStreamAsync(item.Content)
-                    .ConfigureAwait(false), mimeType)
+                    .FromStream(await this.GetStreamAsync(item.Content), mimeType)
                     .AsAttachment(fileName);
             });
 
@@ -43,8 +42,7 @@ namespace Liquidacoes.Modules.Liquidacao
                 var request = this.CustomBindAndValidate<FileUploadRequest>();
 
                 var fileUploadResult = await fileUploadHandler
-                    .HandleUploadAsync(request.UserId, request.File, liquidacaoStore, eventStore)
-                    .ConfigureAwait(false);
+                    .HandleUploadAsync(request.UserId, request.File, liquidacaoStore, eventStore);
 
                 var response = new FileUploadResponse(fileUploadResult);
 
