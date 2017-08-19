@@ -66,13 +66,15 @@ namespace Liquidacoes.Domain
 
         private string FillWithSpace(string value, int length)
         {
+            if (value == null)
+                return new string(' ', length);
+
             if (value.Length > length)
+            {
                 return value.Substring(0, length);
+            }
 
-            while (value.Length < length)
-                value += " ";
-
-            return value;
+            return value + new string(' ', length - value.Length);
         }
     }
 }
